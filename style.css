@@ -1,0 +1,120 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+/* VARIABLES */
+:root {
+    --fontSize: 16px;
+    --fontShadow: #11111186;
+    --primary: #ffffff;
+    --secondary: #F2CC39;
+    --accents: #3D3D3D;
+    --accents2: #A3CDD9;
+    --transition: 0.3s all ease-in-out;
+}
+/* SETUP */
+html {
+    overflow-x: hidden;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* GLOBAL */
+a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style: none;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+/* navigation bar */
+nav.navigation {
+    background-color: var(--accents);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--secondary);
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 35px;
+    color: var(--primary);
+}
+.logo :hover, ul.list li a:hover {
+    color: var(--secondary);
+    transition: var(--transition);
+}
+ul.list {
+    display: flex; 
+}
+ul.list li a {
+    font-size: 20px;
+    color: var(--primary);
+    margin-left: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.burger-menu {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    display: none; 
+}
+.burger-menu span {
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+}
+/* Header */
+header {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+}
+header .header-title {
+    color: var(--primary);
+    display: inline-block;
+    letter-spacing:  1.5px;
+    text-shadow: 2px 1px 2px var(--accents);
+}
+.header-title h3 {
+    font-size: 2rem;    
+}
+.header-title h1 {
+    font-size: 3.6rem;
+}
+.header-title h5 {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+}
+.btn {
+    background: var(--secondary);
+    color: var(--accents);
+    font-weight: bold;
+    text-shadow: none;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px;
+   /* border: 1px solid var(--accents);*/
+}
+.btn:hover {
+    background: var(--accents);
+    color: var(--secondary);
+    transition: var(--transition);
+}
