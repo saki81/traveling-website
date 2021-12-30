@@ -6,7 +6,7 @@
     --fontShadow: #11111186;
     --primary: #ffffff;
     --secondary: #F2CC39;
-    --accents: #3D3D3D;
+    --accents: #12171d;
     --accents2: #A3CDD9;
     --transition: 0.3s all ease-in-out;
 }
@@ -31,14 +31,14 @@ h1, h2, h3, h4, h5 {
     font-family: 'Open Sans', sans-serif;
 }
 .container {
-    width: 80%;
+    width: 88%;
     margin: auto;
 }
 /* navigation bar */
 nav.navigation {
     background-color: var(--accents);
     padding: 15px 0;
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
     position: relative;
 }
 .nav-menu {
@@ -78,19 +78,20 @@ ul.list li a {
 }
 /* Header */
 header {
-    background-image: url(img/header.jpg);
+    background-image: linear-gradient(var(--accents),rgba(0, 0,0, 0.15)), url(img/header.jpg);
     background-position: center;
-    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 80vh;
     display: flex;
     align-items: flex-end;
 }
-header .header-title {
+header hgroup {
     color: var(--primary);
     display: inline-block;
-    letter-spacing:  1.5px;
-    text-shadow: 2px 1px 2px var(--accents);
+    letter-spacing:  1.2px;
+    text-shadow: 2px 1px 2px var(--fontShadow);
 }
 .header-title h3 {
     font-size: 2rem;    
@@ -105,6 +106,7 @@ header .header-title {
 .btn {
     background: var(--secondary);
     color: var(--accents);
+    display: inline-block;
     font-weight: bold;
     text-shadow: none;
     font-size: 20px;
@@ -117,8 +119,46 @@ header .header-title {
     color: var(--secondary);
     transition: var(--transition);
 }
+/* footer */
+footer {
+    background-color: var(--accents);
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    flex-wrap: wrap;
+}
+footer article {
+    flex: 0 0 22%;
+    display: flex;
+    flex-direction: column;
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+footer .map .map-wrapper article iframe {
+    height: 100%;
+    width: 100%;
+}
+footer article h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+footer article address {
+    margin-bottom: 7px;
+    font-size: 1.2rem
+}
+footer article a {
+    color: var(--primary);
+}
+footer article a:hover {
+    color: var(--secondary);
+} 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .container {
+        width: 92%;
+    }
     .nav-menu .list {
         position: absolute;
         width: 100%;
@@ -153,5 +193,23 @@ header .header-title {
     }
     .burger-menu.active .bar:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
-    }  
+    }
+    header {
+        background-position: right;
+    }
+    .header-title h1 {
+        font-size: 3.2rem;
+        line-height: 1.1;
+        margin: 20px 0;
+    }
+    footer article address a {
+        font-size: 0.9rem;
+    }
+    footer .container .map.map-wrapper iframe {
+        height: 100%;   
+    }
+    footer article p {
+        margin-bottom: 30px;
+    }
+    
 }
