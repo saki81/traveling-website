@@ -7,7 +7,7 @@
     --primary: #ffffff;
     --secondary: #F2CC39;
     --accents: #12171d;
-    --accents2: #A3CDD9;
+    --accents2: #5daec0;
     --transition: 0.3s all ease-in-out;
 }
 /* SETUP */
@@ -27,12 +27,29 @@ a {
 ul {
     list-style: none;
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
     font-family: 'Open Sans', sans-serif;
 }
 .container {
     width: 88%;
     margin: auto;
+}
+.btn {
+    background: var(--secondary);
+    color: var(--accents);
+    display: inline-block;
+    font-weight: bold;
+    text-shadow: none;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    padding: 10px 20px;
+   /* border: 1px solid var(--accents);*/
+}
+.btn:hover {
+    background: var(--accents);
+    color: var(--secondary);
+    transition: var(--transition);
 }
 /* navigation bar */
 nav.navigation {
@@ -78,7 +95,7 @@ ul.list li a {
 }
 /* Header */
 header {
-    background-image: linear-gradient(var(--accents),rgba(0, 0,0, 0.15)), url(img/header.jpg);
+    background-image: linear-gradient(var(--accents),rgba(0, 0, 0, 0.15)), url(img/header.jpg);
     background-position: center;
     background-position: top;
     background-repeat: no-repeat;
@@ -90,11 +107,11 @@ header {
 header hgroup {
     color: var(--primary);
     display: inline-block;
-    letter-spacing:  1.2px;
+    letter-spacing:  1px;
     text-shadow: 2px 1px 2px var(--fontShadow);
 }
-.header-title h3 {
-    font-size: 2rem;    
+.header-title h3, .holiday-title h3, .holiday .card h3  {
+    font-size: 1.7rem;    
 }
 .header-title h1 {
     font-size: 3.6rem;
@@ -102,22 +119,51 @@ header hgroup {
 .header-title h5 {
     font-size: 1.3rem;
     margin-bottom: 35px;
+    
 }
-.btn {
-    background: var(--secondary);
-    color: var(--accents);
-    display: inline-block;
-    font-weight: bold;
-    text-shadow: none;
-    font-size: 20px;
-    border-radius: 25px;
-    padding: 10px 20px;
-   /* border: 1px solid var(--accents);*/
+/* holiday */
+.holiday {
+    padding: 60px 0;
+    line-height: 2;
 }
-.btn:hover {
-    background: var(--accents);
-    color: var(--secondary);
-    transition: var(--transition);
+.holiday-title {
+    text-align: center;
+    margin: auto;
+    color: var(--accents2);
+    text-shadow: 1px 1px 1px var(--fontShadow);    
+}
+.holiday-title h5 {
+    font-size: 1.3rem;
+    margin-bottom: 65px;
+    line-height: 1.5;
+}
+.holiday .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.holiday .row .card {
+   color: var(--accents)
+}
+.holiday article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.holiday article {
+    flex: 0 0 32%;
+    border-radius: 10px;
+    box-shadow: .6px .6px 5px .6px var(--accents2);
+    padding: 20px;
+}
+.holiday p {
+    margin-bottom: 20px;
+    line-height: 1.7
+}
+.holiday .btn {
+    letter-spacing: 1px;
+    padding: 5px 20px;
+    font-size: 1.1rem;
 }
 /* footer */
 footer {
@@ -130,7 +176,7 @@ footer .container {
     flex-wrap: wrap;
 }
 footer article {
-    flex: 0 0 22%;
+    flex: 0 0 25%;
     display: flex;
     flex-direction: column;
     color: var(--primary);
@@ -202,6 +248,13 @@ footer article a:hover {
         line-height: 1.1;
         margin: 20px 0;
     }
+    .holiday .row {
+        flex-direction: column;
+    }
+    .holiday article {
+        margin-bottom: 25px;
+    }
+    
     footer article address a {
         font-size: 0.9rem;
     }
@@ -213,3 +266,9 @@ footer article a:hover {
     }
     
 }
+/*@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .holiday article {
+        line-height: 1.5;
+        padding: 15px;
+    }
+}*/
