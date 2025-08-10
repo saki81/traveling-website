@@ -50,10 +50,11 @@ h1, h2, h3, h4, h5, p {
 }
 /* navigation bar */
 nav.navigation {
+    position: fixed;
     background-color: var(--accents);
-    padding: 15px 0;
+    padding: 12px 0;
     border-bottom: 1px solid var(--secondary);
-    position: relative;
+    width: 100%
 }
 .nav-menu {
     display: flex;
@@ -120,7 +121,7 @@ header hgroup {
 }
 /* holiday */
 .holiday, .clients {
-    padding: 60px 0;
+    padding: 90px 0;
     line-height: 1;
 }
 .holiday-title, .client-title {
@@ -170,7 +171,7 @@ header hgroup {
 /* adventure */
 .adventures {
     background-color: var(--accents2);
-    padding: 40px 0;
+    padding: 100px 0;
     color: var(--primary);
     text-shadow: 1px 1px 1px var(--fontShadow); 
 }
